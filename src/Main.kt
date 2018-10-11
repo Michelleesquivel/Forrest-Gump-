@@ -1,6 +1,5 @@
 package main
 
-
 import box.Boxofchocolate
 import persons.forrest
 
@@ -23,13 +22,13 @@ fun main(args: Array<String>) {
                 print("Forrest Gump tiene " + people.quantity.size + " chocolates")
                 val opcion1 = readLine()!!.toInt()
 
-
             }
             2-> {
-
+            wantsToContinue = false
             }
         }
 
-    }while(wantsToContinue
-    )
+    }while(wantsToContinue)
+    print("¿Desea que Forrest Gump agarre un chocolate? Presione 1=si 2=no:  ")
+    val opcion = readLine()!!.toInt()
 }

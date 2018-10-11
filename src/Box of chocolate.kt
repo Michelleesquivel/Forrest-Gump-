@@ -8,10 +8,10 @@ class Boxofchocolate (
         private var chocolates: ArrayList<Chocolate> = ArrayList()
 ){
     fun initList(){
-        val chocolates: ArrayList<String> = ArrayList()
-        chocolates.add("Hersheys")
-        chocolates.add("Snickers")
-        chocolates.add("Toblerone")
+        //chocolates: ArrayList<String>; ArrayList()
+        chocolates.add(Chocolate("Hersheys"))
+        chocolates.add(Chocolate("Snickers"))
+        chocolates.add(Chocolate("Toblerone"))
     }
 
     fun pickUp(){
@@ -20,12 +20,13 @@ class Boxofchocolate (
         val numRnd = random.nextInt(0..max) // print 0, 1 ó 2
         if (chocolates.size > 0){
             chocolates.removeAt(numRnd)
-        }
+        }else if(chocolates.size <= 0 )
+            println("Ya no hay chocolates, Forrest esta triste :(")
     }
 
     fun Random.nextInt(range: IntRange): Int {
         return range.start + nextInt(range.last - range.start)
-    }
+   }
 }
 
 
